@@ -1,4 +1,4 @@
-# google-cdn-data
+# google-cdn-data [![Build Status](https://travis-ci.org/shahata/google-cdn-data.png)](https://travis-ci.org/shahata/google-cdn-data)
 
 > [Google CDN](https://developers.google.com/speed/libraries/devguide) data for [google-cdn](https://github.com/passy/google-cdn).
 
