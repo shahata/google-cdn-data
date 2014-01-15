@@ -1,0 +1,23 @@
+{
+  "name": "google-cdn-data",
+  "version": "0.1.0",
+  "description": "Google CDN Data for google-cdn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shahata/google-cdn-data.git"
+  },
+  "author": "Shahar Talmi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shahata/google-cdn-data/issues"
+  },
+  "homepage": "https://github.com/shahata/google-cdn-data",
+  "keywords": [
+    "cdn",
+    "google"
+  ]
+}
