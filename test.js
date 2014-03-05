@@ -8,19 +8,77 @@ describe('google-cdn-data', function () {
     this.data = require('./index');
   });
 
-  it('should include jquery 2.0.3', function () {
-    assert.include(this.data.jquery.versions, '2.0.3');
+  describe('jQuery libraries', function () {
+    it('should include jquery 2.1.0', function () {
+      assert.include(this.data.jquery.versions, '2.1.0');
+    });
+
+    it('should build jquery 2.1.0 url', function () {
+      assert.equal(this.data.jquery.url('2.1.0'), '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
+    });
   });
 
-  it('should build jquery 2.0.3 url', function () {
-    assert.equal(this.data.jquery.url('2.0.3'), '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js');
+  describe('jQuery UI libraries', function () {
+    it('should include jquery-ui 1.10.4', function () {
+      assert.include(this.data['jquery-ui'].versions, '1.10.4');
+    });
+
+    it('should build jquery-ui 1.10.4 url', function () {
+      assert.equal(this.data['jquery-ui'].url('1.10.4'), '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js');
+    });
   });
 
-  it('should include angular-resource 1.2.7', function () {
-    assert.include(this.data['angular-resource'].versions, '1.2.7');
+  describe('Dojo libraries', function () {
+    it('should include dojo 1.9.2', function () {
+      assert.include(this.data.dojo.versions, '1.9.2');
+    });
+
+    it('should build dojo 1.9.2 url', function () {
+      assert.equal(this.data.dojo.url('1.9.2'), '//ajax.googleapis.com/ajax/libs/dojo/1.9.2/dojo/dojo.js');
+    });
   });
 
-  it('should build angular-resource 1.2.7 url', function () {
-    assert.equal(this.data['angular-resource'].url('1.2.7'), '//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js');
+  describe('SWFObject libraries', function () {
+    it('should include swfobject 2.2', function () {
+      assert.include(this.data.swfobject.versions, '2.2');
+    });
+
+    it('should build swfobject 2.2 url', function () {
+      assert.equal(this.data.swfobject.url('2.2'), '//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js');
+    });
+  });
+
+  describe('AngularJS libraries', function () {
+    it('should include angular 1.2.14', function () {
+      assert.include(this.data['angular'].versions, '1.2.14');
+    });
+
+    it('should include angular-animate 1.2.14', function () {
+      assert.include(this.data['angular-animate'].versions, '1.2.14');
+    });
+
+    it('should include angular-cookies 1.2.14', function () {
+      assert.include(this.data['angular-cookies'].versions, '1.2.14');
+    });
+
+    it('should include angular-loader 1.2.14', function () {
+      assert.include(this.data['angular-loader'].versions, '1.2.14');
+    });
+
+    it('should include angular-resource 1.2.14', function () {
+      assert.include(this.data['angular-resource'].versions, '1.2.14');
+    });
+
+    it('should include angular-route 1.2.14', function () {
+      assert.include(this.data['angular-route'].versions, '1.2.14');
+    });
+
+    it('should include angular-sanitize 1.2.14', function () {
+      assert.include(this.data['angular-sanitize'].versions, '1.2.14');
+    });
+
+    it('should build angular-resource 1.2.14 url', function () {
+      assert.equal(this.data['angular-resource'].url('1.2.14'), '//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-resource.min.js');
+    });
   });
 });
