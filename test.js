@@ -9,12 +9,12 @@ describe('google-cdn-data', function () {
   });
 
   describe('jQuery libraries', function () {
-    it('should include jquery 2.1.0', function () {
-      assert.include(this.data.jquery.versions, '2.1.0');
+    it('should include jquery 2.1.1', function () {
+      assert.include(this.data.jquery.versions, '2.1.1');
     });
 
-    it('should build jquery 2.1.0 url', function () {
-      assert.equal(this.data.jquery.url('2.1.0'), '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js');
+    it('should build jquery 2.1.1 url', function () {
+      assert.equal(this.data.jquery.url('2.1.1'), '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
     });
   });
 
