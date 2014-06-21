@@ -29,19 +29,23 @@ var data = module.exports = {
 
 // AngularJS
 
-var angularFiles = [
-  'angular',
-  'angular-animate',
-  'angular-cookies',
-  'angular-loader',
-  'angular-resource',
-  'angular-route',
-  'angular-sanitize'
-];
+var angularFiles = {
+  'angular': '1.0.1',
+  'angular-animate': '1.0.1',
+  'angular-cookies': '1.0.1',
+  'angular-loader': '1.0.1',
+  'angular-resource': '1.0.1',
+  'angular-route': '1.0.1',
+  'angular-sanitize': '1.0.1',
+  'angular-touch': '1.2.0',
+},
+angularVersions = ['1.2.18', '1.2.17', '1.2.16', '1.2.15', '1.2.14', '1.2.13', '1.2.12', '1.2.11', '1.2.10', '1.2.9', '1.2.8', '1.2.7', '1.2.6', '1.2.5', '1.2.4', '1.2.3', '1.2.2', '1.2.1', '1.2.0', '1.0.8', '1.0.7', '1.0.6', '1.0.5', '1.0.4', '1.0.3', '1.0.2', '1.0.1'];
 
-angularFiles.forEach(function (item) {
+Object.keys(angularFiles).forEach(function (item) {
+  var firstVersion = angularFiles[item];
+
   data[item] = {
-    versions: ['1.2.16', '1.2.15', '1.2.14', '1.2.13', '1.2.12', '1.2.11', '1.2.10', '1.2.9', '1.2.8', '1.2.7', '1.2.6', '1.2.5', '1.2.4', '1.2.3', '1.2.2', '1.2.1', '1.2.0', '1.0.8', '1.0.7', '1.0.6', '1.0.5', '1.0.4', '1.0.3', '1.0.2', '1.0.1'],
+    versions: angularVersions.slice(0, angularVersions.indexOf(firstVersion) + 1),
     url: function (version) {
       return '//ajax.googleapis.com/ajax/libs/angularjs/' + version + '/' + item + '.min.js';
     }
