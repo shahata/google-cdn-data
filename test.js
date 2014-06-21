@@ -49,36 +49,44 @@ describe('google-cdn-data', function () {
   });
 
   describe('AngularJS libraries', function () {
-    it('should include angular 1.2.16', function () {
-      assert.include(this.data['angular'].versions, '1.2.16');
+    it('should include angular 1.2.18', function () {
+      assert.include(this.data['angular'].versions, '1.2.18');
     });
 
-    it('should include angular-animate 1.2.16', function () {
-      assert.include(this.data['angular-animate'].versions, '1.2.16');
+    it('should include angular-animate 1.2.18', function () {
+      assert.include(this.data['angular-animate'].versions, '1.2.18');
     });
 
-    it('should include angular-cookies 1.2.16', function () {
-      assert.include(this.data['angular-cookies'].versions, '1.2.16');
+    it('should include angular-cookies 1.2.18', function () {
+      assert.include(this.data['angular-cookies'].versions, '1.2.18');
     });
 
-    it('should include angular-loader 1.2.16', function () {
-      assert.include(this.data['angular-loader'].versions, '1.2.16');
+    it('should include angular-loader 1.2.18', function () {
+      assert.include(this.data['angular-loader'].versions, '1.2.18');
     });
 
-    it('should include angular-resource 1.2.16', function () {
-      assert.include(this.data['angular-resource'].versions, '1.2.16');
+    it('should include angular-resource 1.2.18', function () {
+      assert.include(this.data['angular-resource'].versions, '1.2.18');
     });
 
-    it('should include angular-route 1.2.16', function () {
-      assert.include(this.data['angular-route'].versions, '1.2.16');
+    it('should include angular-route 1.2.18', function () {
+      assert.include(this.data['angular-route'].versions, '1.2.18');
     });
 
-    it('should include angular-sanitize 1.2.16', function () {
-      assert.include(this.data['angular-sanitize'].versions, '1.2.16');
+    it('should include angular-sanitize 1.2.18', function () {
+      assert.include(this.data['angular-sanitize'].versions, '1.2.18');
     });
 
-    it('should build angular-resource 1.2.16 url', function () {
-      assert.equal(this.data['angular-resource'].url('1.2.16'), '//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js');
+    it('should build angular-resource 1.2.18 url', function () {
+      assert.equal(this.data['angular-resource'].url('1.2.18'), '//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-resource.min.js');
+    });
+
+    it('should include angular-touch 1.2.18', function () {
+      assert.include(this.data['angular-touch'].versions, '1.2.18');
+    });
+
+    it('should not include angular-touch 1.0.8', function () {
+      assert.notInclude(this.data['angular-touch'].versions, '1.0.8');
     });
   });
 });
