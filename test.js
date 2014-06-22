@@ -50,7 +50,7 @@ describe('google-cdn-data', function () {
 
   describe('AngularJS libraries', function () {
     it('should include angular 1.2.16', function () {
-      assert.include(this.data['angular'].versions, '1.2.16');
+      assert.include(this.data.angular.versions, '1.2.16');
     });
 
     it('should include angular-animate 1.2.16', function () {
@@ -75,6 +75,10 @@ describe('google-cdn-data', function () {
 
     it('should include angular-sanitize 1.2.16', function () {
       assert.include(this.data['angular-sanitize'].versions, '1.2.16');
+    });
+
+    it('should include angular-touch 1.2.16', function () {
+      assert.include(this.data['angular-touch'].versions, '1.2.16');
     });
 
     it('should build angular-resource 1.2.16 url', function () {
