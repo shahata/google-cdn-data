@@ -1,6 +1,6 @@
 {
   "name": "google-cdn-data",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Google CDN Data for google-cdn",
   "main": "index.js",
   "scripts": {
