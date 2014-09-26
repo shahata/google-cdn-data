@@ -52,6 +52,10 @@ describe('google-cdn-data', function () {
     it('should include angular 1.2.16', function () {
       assert.include(this.data.angular.versions, '1.2.16');
     });
+    
+    it('should include unstable angular 1.3.0-rc.3', function () {
+      assert.include(this.data.angular.versions, '1.3.0-rc.3');
+    });
 
     it('should include angular-animate 1.2.16', function () {
       assert.include(this.data['angular-animate'].versions, '1.2.16');
