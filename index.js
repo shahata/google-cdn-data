@@ -24,6 +24,12 @@ var data = module.exports = {
     url: function (version) {
       return '//ajax.googleapis.com/ajax/libs/swfobject/' + version + '/swfobject.js';
     }
+  },
+  'angular-material': {
+    versions: ['0.7.0', '0.6.1'],
+    url: function (version) {
+      return '//ajax.googleapis.com/ajax/libs/angular_material/' + version + '/angular-material.min.js';
+    }
   }
 };
 
