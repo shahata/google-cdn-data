@@ -38,8 +38,10 @@ var data = module.exports = {
 var angularFiles = [
   'angular',
   'angular-animate',
+  'angular-aria',
   'angular-cookies',
   'angular-loader',
+  'angular-messages',
   'angular-resource',
   'angular-route',
   'angular-sanitize',
