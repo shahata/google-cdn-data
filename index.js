@@ -26,7 +26,7 @@ var data = module.exports = {
     }
   },
   'angular-material': {
-    versions: ['0.8.3', '0.8.2', '0.8.1', '0.8.0', '0.7.1', '0.7.0', '0.6.1'],
+    versions: ['0.9.0', '0.8.3', '0.8.2', '0.8.1', '0.8.0', '0.7.1', '0.7.0', '0.6.1'],
     url: function (version) {
       return '//ajax.googleapis.com/ajax/libs/angular_material/' + version + '/angular-material.min.js';
     }
