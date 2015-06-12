@@ -20,7 +20,7 @@ var data = module.exports = {
     }
   },
   swfobject: {
-    versions: ['2.2', '2.1'],
+    versions: ['2.2.0', '2.1.0'],
     url: function (version) {
       return '//ajax.googleapis.com/ajax/libs/swfobject/' + version + '/swfobject.js';
     }
