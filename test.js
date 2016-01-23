@@ -2,6 +2,7 @@
 
 'use strict';
 var assert = require('chai').assert;
+var semver = require('semver');
 
 describe('google-cdn-data', function () {
   beforeEach(function () {
@@ -52,7 +53,27 @@ describe('google-cdn-data', function () {
     it('should include angular 1.2.16', function () {
       assert.include(this.data.angular.versions, '1.2.16');
     });
-    
+
+    it('should include latest stable angular 1.x release', function (done) {
+      var _this = this;
+      require('http').get('http://registry.npmjs.org/angular', function(res) {
+        var body = '';
+
+        res.on('data', function(chunk){
+          body += chunk;
+        });
+
+        res.on('end', function(){
+          var angular = JSON.parse(body);
+          var registryVersions = Object.keys(angular.versions);
+          assert.include(_this.data.angular.versions, semver.maxSatisfying(registryVersions, '1.x'));
+          done();
+        });
+      }).on('error', function(err) {
+        if (err) throw err;
+      });
+    });
+
     it('should include unstable angular 1.3.0-rc.3', function () {
       assert.include(this.data.angular.versions, '1.3.0-rc.3');
     });
